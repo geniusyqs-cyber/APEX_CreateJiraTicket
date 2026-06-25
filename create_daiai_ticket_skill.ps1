@@ -1,7 +1,7 @@
 param(
     [string]$Summary = "DAIAI Story ticket summary",
     [string]$Description = "",
-    [string]$DescriptionFile = ".\description.txt"
+    [string]$DescriptionFile = ".\description_daiai.txt"
 )
 
 if (-not $env:JIRA_API_TOKEN) {
