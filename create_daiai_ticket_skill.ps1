@@ -26,4 +26,5 @@ python .\create_daiai_ticket.py `
   --summary "$Summary" `
   --description "$Description" `
   --type "Story" `
-  --project "DAIAI"
+  --project "DAIAI" `
+  --parent "DAIAI-423"
