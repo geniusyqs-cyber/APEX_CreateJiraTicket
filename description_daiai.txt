@@ -1,11 +1,13 @@
-## DAIAI Story 描述文档
+1. Context & Background
+The existing evaluation gold set for People Extraction is mainly composed of large-cap enterprise SEC filings, lacking sufficient samples of small and medium-sized enterprises (SMEs). SME filings have unique disclosure styles, simplified tables and abbreviated text descriptions, which are not fully covered by current evaluation benchmarks. This leads to biased evaluation results that cannot truly reflect extraction performance on SME documents, limiting the comprehensiveness of data quality assessment. To achieve full-scenario coverage evaluation, we need to build a supplementary SME-focused gold set.
 
-这是用于 AI EchoSage (DAIAI) 项目 Story 的默认描述文档。
+2. Requirement
+Construct a new SME-oriented evaluation gold set for the People extraction pipeline. The gold set shall contain 10 samples in total, covering multiple diverse industries and typical small/medium sized enterprises. Utilize this gold set to conduct comprehensive extraction quality evaluation and identify SME-specific extraction defects.
+Deliverable: SME inclusive gold set with 10 cross-industry samples completed; full extraction evaluation executed with expanded business coverage
 
-请在此填写 Story 的详细描述，包括：
-- 业务背景
-- 目标与价值
-- 需求范围
-- 交付标准
-
-如果你已经有更详细的 Story 描述，可以直接替换本文内容。
+3. Actual Expectation
+A gold set of exactly 10 filing samples is finalized, covering diverse industries and representative SMEs.
+All SME samples feature typical simplified disclosure formats unique to small and medium companies.
+Complete end-to-end extraction evaluation is run against the new gold set, capturing extraction gaps specific to SME filings.
+A formal evaluation report is generated, summarizing accuracy metrics, missing fields and parsing defects on SME documents.
+Optimization suggestions for extraction rules targeting SME disclosure characteristics are documented for follow-up development tasks.
