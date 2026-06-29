@@ -1,13 +1,19 @@
 1. Context & Background
-The existing evaluation gold set for People Extraction is mainly composed of large-cap enterprise SEC filings, lacking sufficient samples of small and medium-sized enterprises (SMEs). SME filings have unique disclosure styles, simplified tables and abbreviated text descriptions, which are not fully covered by current evaluation benchmarks. This leads to biased evaluation results that cannot truly reflect extraction performance on SME documents, limiting the comprehensiveness of data quality assessment. To achieve full-scenario coverage evaluation, we need to build a supplementary SME-focused gold set.
+The existing evaluation dashboard lacks several core auxiliary viewing, sorting, filtering and comparison capabilities, which hinders engineers and analysts from efficiently verifying chunk parsing results, sorting performance indicators, associating index/commit versions, comparing metric changes across iterations, and viewing topic evaluation data. To improve the usability of the evaluation system and support comprehensive data quality analysis, we need to implement a batch of front-end function upgrades for all evaluation-related pages.
 
 2. Requirement
-Construct a new SME-oriented evaluation gold set for the People extraction pipeline. The gold set shall contain 10 samples in total, covering multiple diverse industries and typical small/medium sized enterprises. Utilize this gold set to conduct comprehensive extraction quality evaluation and identify SME-specific extraction defects.
-Deliverable: SME inclusive gold set with 10 cross-industry samples completed; full extraction evaluation executed with expanded business coverage
+Complete the following 5 functional optimizations for the evaluation system pages:
+Add a display window for original chunk_text on the chunking_evaluation page
+Add column-level sorting function for all performance metrics on the main evaluation page
+Refactor the dropdown selector for index and commit to two-level linked directory structure (support one-to-one / one-to-many relationship mapping between index and commit)
+Develop a new dedicated page to support diff comparison of metrics across different versions
+Revise and optimize the Topic Evaluation page layout and display logic
+Deliverable: All 5 requested evaluation page features fully developed, tested and released
 
 3. Actual Expectation
-A gold set of exactly 10 filing samples is finalized, covering diverse industries and representative SMEs.
-All SME samples feature typical simplified disclosure formats unique to small and medium companies.
-Complete end-to-end extraction evaluation is run against the new gold set, capturing extraction gaps specific to SME filings.
-A formal evaluation report is generated, summarizing accuracy metrics, missing fields and parsing defects on SME documents.
-Optimization suggestions for extraction rules targeting SME disclosure characteristics are documented for follow-up development tasks.
+On chunking_evaluation page: Original raw chunk text can be fully viewed in an independent readable window for quick verification
+On main evaluation page: Every data column supports independent ascending/descending sorting to flexibly rank performance data
+Index & commit dropdown uses linked two-level directory: After selecting an index, only matching associated commits (1:1 / 1:many) are displayed in the second-level list
+New metric diff page is available: Support selecting 2+ versions to visualize metric value differences, highlight increase/decrease changes
+Topic Evaluation page is fully updated, with clearer data layout, complete topic-related evaluation indicators and better interactive experience
+All new functions pass functional test, no page loading or display regression on existing evaluation modules

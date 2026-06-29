@@ -31,13 +31,13 @@ if (-not $pythonCmd) {
 $pythonExe = $pythonCmd.Source
 $script = ".\create_daiai_ticket.py"
 $args = @(
-    "--summary", "Evaluation: Introduce a gold set to include samples from small and medium sized companies for broader coverage",
+    "--summary", "Evaluation Page UI & Function Enhancement",
     "--description", $Description,
     "--type", "Story",
     "--project", "DAIAI",
     "--parent", "DAIAI-423",
     "--priority", "Medium (migrated)",
-    "--assignee", "712020:3969f84b-742b-41bb-80fd-95b2e6053b16",
+    "--assignee", "712020:00e3b76d-5d06-40ca-8356-5f8082c5458a",
     "--labels", $Labels
 )
 
